@@ -5,6 +5,8 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+        <script src="path/to/your/webpack/bundled/script.js"></script>
+
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -17,21 +19,19 @@
             gesture-detector
         >
             <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
+               src="assets/asset.gif"
+                scale="1 1 1"
+                class="clickable"
+                rotation="-90 0 0"
+                material="shader: gif; src: assets/asset.gif;"
+                gesture-handler
             >
-                <a-image
-                    src="assets/asset.gif"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
+            <a-image
+                src="assets/asset.gif"
+                scale="1 1 1"
+                class="clickable"
+                rotation="-90 0 0"
+                gesture-handler
                 ></a-image>
             </a-marker>
 
